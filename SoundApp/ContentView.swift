@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Cocoa
+
 
 struct ContentView: View {
     @State var volume: Double = 50
@@ -18,11 +20,18 @@ struct ContentView: View {
             Text("Hello, I am typing this message")
             Slider(value: $volume, in: 0...100)
         } .padding()
+        
+        Button(action: {
+            openSystemSettings()
+        }) {
+            Text("Open System Settings")
+        }
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+    
+    private func openSystemSettings() {
+            let workspace = NSWorkspace.shared
+            let url = URL(string: "x-apple.systempreferences:com.apple.preference.sound")!
+            workspace.open(url)
+        }
 }
