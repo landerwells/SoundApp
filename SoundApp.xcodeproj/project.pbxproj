@@ -15,6 +15,9 @@
 		5B66E58D2A1BCC6D00CA0B0D /* SoundAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E58C2A1BCC6D00CA0B0D /* SoundAppUITests.swift */; };
 		5B66E58F2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E58E2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift */; };
 		5BC8F6D42A1D5A2C00ACEAE0 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8F6D32A1D5A2C00ACEAE0 /* Sound.swift */; };
+		5BD775D22A1E9768009C4D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD775D12A1E9768009C4D6F /* AppDelegate.swift */; };
+		5BD775D42A1E98B6009C4D6F /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD775D32A1E98B6009C4D6F /* PopoverView.swift */; };
+		5BD775D62A1E9997009C4D6F /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD775D52A1E9997009C4D6F /* StatusBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		5B66E58C2A1BCC6D00CA0B0D /* SoundAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAppUITests.swift; sourceTree = "<group>"; };
 		5B66E58E2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5BC8F6D32A1D5A2C00ACEAE0 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		5BD775D12A1E9768009C4D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BD775D32A1E98B6009C4D6F /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		5BD775D52A1E9997009C4D6F /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,14 @@
 		5B66E56F2A1BCC6C00CA0B0D /* SoundApp */ = {
 			isa = PBXGroup;
 			children = (
+				5BD775D02A1E9733009C4D6F /* MenuBar */,
 				5BC8F6D22A1D59E900ACEAE0 /* Models */,
 				5B66E5702A1BCC6C00CA0B0D /* SoundAppApp.swift */,
 				5B66E5722A1BCC6C00CA0B0D /* ContentView.swift */,
 				5B66E5742A1BCC6D00CA0B0D /* Assets.xcassets */,
 				5B66E5792A1BCC6D00CA0B0D /* SoundApp.entitlements */,
 				5B66E5762A1BCC6D00CA0B0D /* Preview Content */,
+				5BD775D32A1E98B6009C4D6F /* PopoverView.swift */,
 			);
 			path = SoundApp;
 			sourceTree = "<group>";
@@ -138,6 +146,15 @@
 				5BC8F6D32A1D5A2C00ACEAE0 /* Sound.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5BD775D02A1E9733009C4D6F /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				5BD775D12A1E9768009C4D6F /* AppDelegate.swift */,
+				5BD775D52A1E9997009C4D6F /* StatusBarController.swift */,
+			);
+			path = MenuBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD775D22A1E9768009C4D6F /* AppDelegate.swift in Sources */,
+				5BD775D62A1E9997009C4D6F /* StatusBarController.swift in Sources */,
 				5B66E5732A1BCC6C00CA0B0D /* ContentView.swift in Sources */,
 				5BC8F6D42A1D5A2C00ACEAE0 /* Sound.swift in Sources */,
+				5BD775D42A1E98B6009C4D6F /* PopoverView.swift in Sources */,
 				5B66E5712A1BCC6C00CA0B0D /* SoundAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
