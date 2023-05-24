@@ -14,6 +14,7 @@
 		5B66E5832A1BCC6D00CA0B0D /* SoundAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E5822A1BCC6D00CA0B0D /* SoundAppTests.swift */; };
 		5B66E58D2A1BCC6D00CA0B0D /* SoundAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E58C2A1BCC6D00CA0B0D /* SoundAppUITests.swift */; };
 		5B66E58F2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E58E2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift */; };
+		5BC8F6D42A1D5A2C00ACEAE0 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8F6D32A1D5A2C00ACEAE0 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		5B66E5882A1BCC6D00CA0B0D /* SoundAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B66E58C2A1BCC6D00CA0B0D /* SoundAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAppUITests.swift; sourceTree = "<group>"; };
 		5B66E58E2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5BC8F6D32A1D5A2C00ACEAE0 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		5B66E56F2A1BCC6C00CA0B0D /* SoundApp */ = {
 			isa = PBXGroup;
 			children = (
+				5BC8F6D22A1D59E900ACEAE0 /* Models */,
 				5B66E5702A1BCC6C00CA0B0D /* SoundAppApp.swift */,
 				5B66E5722A1BCC6C00CA0B0D /* ContentView.swift */,
 				5B66E5742A1BCC6D00CA0B0D /* Assets.xcassets */,
@@ -127,6 +130,14 @@
 				5B66E58E2A1BCC6D00CA0B0D /* SoundAppUITestsLaunchTests.swift */,
 			);
 			path = SoundAppUITests;
+			sourceTree = "<group>";
+		};
+		5BC8F6D22A1D59E900ACEAE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8F6D32A1D5A2C00ACEAE0 /* Sound.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B66E5732A1BCC6C00CA0B0D /* ContentView.swift in Sources */,
+				5BC8F6D42A1D5A2C00ACEAE0 /* Sound.swift in Sources */,
 				5B66E5712A1BCC6C00CA0B0D /* SoundAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

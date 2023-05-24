@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var volume: Double = 50
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, I am typing this message")
-        }
-        .padding()
+            Slider(value: $volume, in: 0...100)
+        } .padding()
     }
 }
 
