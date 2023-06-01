@@ -19,7 +19,7 @@ class StatusBarController {
         statusItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "house", accessibilityDescription: nil)
+            button.image = NSImage(systemSymbolName: "speaker.wave.3.fill", accessibilityDescription: nil)
             button.action = #selector(showApp(sender:))
             button.target = self
         }
