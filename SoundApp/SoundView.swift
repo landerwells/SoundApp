@@ -16,12 +16,16 @@ struct SoundView: View {
     @State var volume: Double = 0.50
     
     var body: some View {
+        
         VStack(alignment: .leading) {
             HStack {
                 Text("**Sound**")
-                
             }
-            Slider(value: $volume, in: 0...1.0, step: 0.01)
+            
+            Slider(value: $volume, in: 0...1.0).frame(width: 200)
+            
+            Divider()
+            
             
             Button(action: {
                 openSystemSettings()
@@ -30,11 +34,12 @@ struct SoundView: View {
             }
             
             
-        } .frame(width: 225).padding()
-        
+        }
+            .frame(width: 250)
             .onChange(of: volume) { newValue in
                 setSystemVolume(volume: Float(newValue))
             }
+            .padding(15)
         
     }
     
@@ -83,4 +88,8 @@ func setSystemVolume(volume: Float) {
         UInt32(MemoryLayout<Float32>.size),
         &targetVolume
     )
+}
+
+func getDockApps() {
+    
 }
