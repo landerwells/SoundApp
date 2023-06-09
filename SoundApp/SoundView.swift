@@ -9,6 +9,7 @@ import SwiftUI
 import Cocoa
 import AppKit
 import AudioToolbox
+import MediaPlayer
 
 
 struct SoundView: View {
@@ -22,7 +23,10 @@ struct SoundView: View {
                 Text("**Sound**")
             }
             
-            Slider(value: $volume, in: 0...1.0).frame(width: 200)
+            Slider(value: $volume, in: 0...1.0)
+                .frame(width: 200)
+
+            Text("\(Int(volume * 100))%")
             
             Divider()
             
@@ -51,11 +55,13 @@ struct SoundView: View {
     
 }
 
+/*
 struct SoundView_Previews: PreviewProvider {
     static var previews: some View {
         SoundView()
     }
 }
+*/
 
 func setSystemVolume(volume: Float) {
     var deviceId = AudioObjectID(kAudioObjectUnknown)
@@ -88,8 +94,4 @@ func setSystemVolume(volume: Float) {
         UInt32(MemoryLayout<Float32>.size),
         &targetVolume
     )
-}
-
-func getDockApps() {
-    
 }
