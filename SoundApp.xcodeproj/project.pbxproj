@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3BD87C2A33F354007691CC /* DockApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3BD87B2A33F354007691CC /* DockApps.swift */; };
 		5B475FCA2A27D55B00CD1635 /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B475FC92A27D55B00CD1635 /* ApplicationMenu.swift */; };
 		5B66E5712A1BCC6C00CA0B0D /* SoundAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E5702A1BCC6C00CA0B0D /* SoundAppApp.swift */; };
 		5B66E5732A1BCC6C00CA0B0D /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E5722A1BCC6C00CA0B0D /* SoundView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B3BD87B2A33F354007691CC /* DockApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockApps.swift; sourceTree = "<group>"; };
 		5B475FC92A27D55B00CD1635 /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		5B66E56D2A1BCC6C00CA0B0D /* SoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B66E5702A1BCC6C00CA0B0D /* SoundAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAppApp.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				5BD775D12A1E9768009C4D6F /* AppDelegate.swift */,
 				5BD775D32A1E98B6009C4D6F /* PopoverView.swift */,
 				5BD775D52A1E9997009C4D6F /* StatusBarController.swift */,
+				5B3BD87B2A33F354007691CC /* DockApps.swift */,
 			);
 			path = MenuBar;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				5BD775D22A1E9768009C4D6F /* AppDelegate.swift in Sources */,
 				5BD775D62A1E9997009C4D6F /* StatusBarController.swift in Sources */,
 				5B475FCA2A27D55B00CD1635 /* ApplicationMenu.swift in Sources */,
+				5B3BD87C2A33F354007691CC /* DockApps.swift in Sources */,
 				5B66E5732A1BCC6C00CA0B0D /* SoundView.swift in Sources */,
 				5BD775D42A1E98B6009C4D6F /* PopoverView.swift in Sources */,
 				5B66E5712A1BCC6C00CA0B0D /* SoundAppApp.swift in Sources */,

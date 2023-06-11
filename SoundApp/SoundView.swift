@@ -15,28 +15,59 @@ import MediaPlayer
 struct SoundView: View {
     
     @State var volume: Double = 0.50
+    @State private var showMenu = false
+
     
     var body: some View {
         
         VStack(alignment: .leading) {
             HStack {
                 Text("**Sound**")
+                Text(appsArray.joined(separator: "\n"))
             }
             
             Slider(value: $volume, in: 0...1.0)
                 .frame(width: 200)
+                .accentColor(.white)
 
             Text("\(Int(volume * 100))%")
+            
+            
+            Button(action: {
+                            showMenu.toggle()
+                        }) {
+                            Text("Additional Options...")
+                                .foregroundColor(.white)
+                        }
+                        .buttonStyle(BorderlessButtonStyle())
+                        
+                        if showMenu {
+                            Menu {
+                                ForEach(apps, id: \.self) { app in
+                                    Text("\(app)")
+                                }
+                            } label: {
+                                EmptyView()
+                            }
+                            .menuStyle(BorderlessButtonMenuStyle())
+                        }
+            
+            
+            
+            
             
             Divider()
             
             
             Button(action: {
                 openSystemSettings()
+                dockApps()
             }) {
                 Text("Sound Settings...")
+                    .foregroundColor(.white)
             }
-            
+            .buttonStyle(BorderlessButtonStyle())
+
             
         }
             .frame(width: 250)
@@ -55,13 +86,13 @@ struct SoundView: View {
     
 }
 
-/*
+
 struct SoundView_Previews: PreviewProvider {
     static var previews: some View {
         SoundView()
     }
 }
-*/
+
 
 func setSystemVolume(volume: Float) {
     var deviceId = AudioObjectID(kAudioObjectUnknown)
