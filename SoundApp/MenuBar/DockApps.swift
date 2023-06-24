@@ -9,10 +9,11 @@ import Foundation
 import Cocoa
 
 let workspace = NSWorkspace.shared
-let apps = workspace.runningApplications.filter{  $0.activationPolicy == .regular }
+var apps = workspace.runningApplications.filter{  $0.activationPolicy == .regular }
 var appsArray: [String] = []
 
 func dockApps() {
+    appsArray.removeAll()
     for app in apps {
         //print("Bundle Identifier: \(app.bundleIdentifier ?? "")")
         //print("Process Identifier: \(app.processIdentifier)")

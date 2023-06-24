@@ -9,81 +9,82 @@ import SwiftUI
 import Cocoa
 import AppKit
 import AudioToolbox
-import MediaPlayer
+import CoreAudio
+//import MediaPlayer
+
 
 
 struct SoundView: View {
     
-    @State var volume: Double = 0.50
+    @StateObject private var volumeManager = VolumeManager.shared
+    //@State public var volume: Double = 0.50
     @State private var showMenu = false
-
     
     var body: some View {
         
         VStack(alignment: .leading) {
             HStack {
                 Text("**Sound**")
-                Text(appsArray.joined(separator: "\n"))
             }
             
-            Slider(value: $volume, in: 0...1.0)
+            Slider(value: $volumeManager.volume, in: 0.0...1.0)
                 .frame(width: 200)
                 .accentColor(.white)
-
-            Text("\(Int(volume * 100))%")
             
+            
+            Text("\(Int(volumeManager.volume * 100))%")
             
             Button(action: {
-                            showMenu.toggle()
-                        }) {
-                            Text("Additional Options...")
-                                .foregroundColor(.white)
+                dockApps()
+                withAnimation {
+                    showMenu.toggle()
+                }
+            }) {
+                Text("**Toggle Menu**")
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .buttonStyle(BorderlessButtonStyle())
+            
+            ScrollView {
+                VStack {
+                    if showMenu {
+                        ForEach(appsArray, id: \.self) { app in
+                            Text("\(app)")
+                            Slider(value: $volumeManager.volume, in: 0...1.0)
+                                .frame(width: 200)
+                                .accentColor(.white)
                         }
-                        .buttonStyle(BorderlessButtonStyle())
-                        
-                        if showMenu {
-                            Menu {
-                                ForEach(apps, id: \.self) { app in
-                                    Text("\(app)")
-                                }
-                            } label: {
-                                EmptyView()
-                            }
-                            .menuStyle(BorderlessButtonMenuStyle())
-                        }
-            
-            
-            
-            
+                    }
+                }
+            }
             
             Divider()
             
-            
             Button(action: {
                 openSystemSettings()
-                dockApps()
             }) {
                 Text("Sound Settings...")
                     .foregroundColor(.white)
             }
             .buttonStyle(BorderlessButtonStyle())
-
-            
+            Spacer() // Add spacer to push content to the top
         }
-            .frame(width: 250)
-            .onChange(of: volume) { newValue in
-                setSystemVolume(volume: Float(newValue))
-            }
-            .padding(15)
         
+        .frame(width: 250)
+        .onChange(of: volumeManager.volume) { newValue in
+            setSystemVolume(volume: Float(newValue))
+            AppDelegate.instance?.updateSymbolImage()
+        }
+        .padding(15)
+        .alignmentGuide(.top) { _ in 0 } // Align the VStack with the top
     }
     
     private func openSystemSettings() {
-            let workspace = NSWorkspace.shared
-            let url = URL(string: "x-apple.systempreferences:com.apple.preference.sound")!
+        let workspace = NSWorkspace.shared
+        let url = URL(string: "x-apple.systempreferences:com.apple.preference.sound")!
         workspace.open(url)
     }
-    
 }
 
 
@@ -126,3 +127,5 @@ func setSystemVolume(volume: Float) {
         &targetVolume
     )
 }
+
+

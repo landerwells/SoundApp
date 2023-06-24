@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0117592A47A463009D5CA4 /* VolumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0117582A47A463009D5CA4 /* VolumeManager.swift */; };
 		5B3BD87C2A33F354007691CC /* DockApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3BD87B2A33F354007691CC /* DockApps.swift */; };
 		5B475FCA2A27D55B00CD1635 /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B475FC92A27D55B00CD1635 /* ApplicationMenu.swift */; };
 		5B66E5712A1BCC6C00CA0B0D /* SoundAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66E5702A1BCC6C00CA0B0D /* SoundAppApp.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0117582A47A463009D5CA4 /* VolumeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeManager.swift; sourceTree = "<group>"; };
 		5B3BD87B2A33F354007691CC /* DockApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockApps.swift; sourceTree = "<group>"; };
 		5B475FC92A27D55B00CD1635 /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		5B66E56D2A1BCC6C00CA0B0D /* SoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				5B66E5742A1BCC6D00CA0B0D /* Assets.xcassets */,
 				5B66E5792A1BCC6D00CA0B0D /* SoundApp.entitlements */,
 				5B66E5762A1BCC6D00CA0B0D /* Preview Content */,
+				5B0117582A47A463009D5CA4 /* VolumeManager.swift */,
 			);
 			path = SoundApp;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD775D22A1E9768009C4D6F /* AppDelegate.swift in Sources */,
+				5B0117592A47A463009D5CA4 /* VolumeManager.swift in Sources */,
 				5BD775D62A1E9997009C4D6F /* StatusBarController.swift in Sources */,
 				5B475FCA2A27D55B00CD1635 /* ApplicationMenu.swift in Sources */,
 				5B3BD87C2A33F354007691CC /* DockApps.swift in Sources */,
